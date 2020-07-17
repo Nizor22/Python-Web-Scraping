@@ -1,9 +1,13 @@
-from selenium import webdriver
-from bs4 import BeautifulSoup
 import requests
+from selenium import webdriver
+from webdriver_manager.Chrome import Chrome
+from bs4 import BeautifulSoup
 
-def login:
-    
+
+def login(user_name, password):
+    driver = webdriver.Chrome()
+    driver.get('https://auth.ioeducation.com/users/sign_in')
+
 
 # Parses the grades from PupilPath.html and adds them to the grades list.
 def parser(html_doc, grades):
@@ -16,7 +20,10 @@ def parser(html_doc, grades):
 
 def main():
     grades = []
-    parser('PupilPath.html', grades)
+    user_name = '242306058'
+    password = 'Nizor2002'
+    login(user_name, password)
+    #parser('PupilPath.html', grades)
     print('*_*_*_*_*_PUPILPATH GRADES_*_*_*_*_*\n')
     for grade in grades:
         if grade >= 91:
