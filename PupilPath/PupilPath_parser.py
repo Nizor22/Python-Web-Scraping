@@ -1,12 +1,23 @@
 import requests
 from selenium import webdriver
-from webdriver_manager.Chrome import Chrome
+from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
+import time
 
 
 def login(user_name, password):
-    driver = webdriver.Chrome()
-    driver.get('https://auth.ioeducation.com/users/sign_in')
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver.get('https://pupilpath.skedula.com/')
+    driver.find_element_by_id('sign_in').click()
+    driver.find_element_by_id('user_username').send_keys(user_name)
+    driver.find_element_by_id('sign_in').click()
+    # time.sleep(0.5)
+    driver.find_element_by_id('user_password').send_keys(password)
+    driver.find_element_by_id('sign_in').click()
+    driver.find_element_by_class_name('ui-button-text').click()
+    with open('PupilPath.html', 'w') as file:
+        file.write(driver.page_source)
+    time.sleep(4)
 
 
 # Parses the grades from PupilPath.html and adds them to the grades list.
@@ -23,7 +34,7 @@ def main():
     user_name = '242306058'
     password = 'Nizor2002'
     login(user_name, password)
-    #parser('PupilPath.html', grades)
+    parser('PupilPath.html', grades)
     print('*_*_*_*_*_PUPILPATH GRADES_*_*_*_*_*\n')
     for grade in grades:
         if grade >= 91:
