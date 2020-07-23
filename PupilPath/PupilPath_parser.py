@@ -18,12 +18,12 @@ def gui():
 
     frame = Frame(root, bg='#6666ff')
     frame.place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8)
-    # root.geometry("%dx%d+0+0" % (w, h))
-    # background = Label(root, image=img)
-    # background.grid(column=0, row=1, columnspan=2)
-    # background.image = img
-    # parseButton = Button(root, text='Parse grades', padx=20, pady=40)
-    # parseButton.grid(column=3, row=3)
+    root.geometry("%dx%d+0+0" % (500, 700))
+    background = Label(root, image=img)
+    background.grid(column=0, row=1, columnspan=2)
+    background.image = img
+    parseButton = Button(root, text='Parse grades', padx=20, pady=40)
+    parseButton.grid(column=3, row=3)
     root.mainloop()
 
 
