@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../Python-GUI/GUI_Python/.idea/GUI_Python.iml" filepath="$PROJECT_DIR$/../Python-GUI/GUI_Python/.idea/GUI_Python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Python-Automation/.idea/Python-Automation.iml" filepath="$PROJECT_DIR$/../Python-Automation/.idea/Python-Automation.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Python-Web-Scraping.iml" filepath="$PROJECT_DIR$/.idea/Python-Web-Scraping.iml" />
     </modules>
   </component>
