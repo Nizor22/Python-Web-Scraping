@@ -5,7 +5,7 @@
   Will be honest, creating just the script without any GUI took me only 2 hours. And although
   adding GUI with Tkinter had given me a hard time because of the bugs I had to face constantly 
   and the time I spent to add all the widgets and pictures(4 days) to make the program look nice and neat, I still enjoyed 
-  working on the project and truly got a chance to implement the knowledge I gained from the GUI courses I watched.
+  working on the project and truly got a chance to implement the knowledge I gained from the GUI courses I watched. Also I had to learn how to use python virtual environments in order to make an executable out of my python script via pyinstaller which didn't support my python version. 
 
 # Description
     1) Shows the login window where the user is asked for his login information to PupilPath.com
